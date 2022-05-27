@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        docker { image 'php:8.1.0-alpine' }
+        docker { image 'nginx:latest' }
     }
     stages {
         stage('Test') {
-            agent { label 'dockerserver' }
+            #agent { label 'dockerserver' }
             steps {
-                sh 'php --version'
+                sh 'nginx -v'
             }
         }
     }
