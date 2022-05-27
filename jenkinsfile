@@ -3,8 +3,8 @@ pipeline {
         docker { image 'nginx:latest' }
     }
     stages {
-        agent { label 'dockerserver' }
         stage('Test') {
+            agent { label 'dockerserver' }
             steps {
                 sh 'nginx -v'
             }
