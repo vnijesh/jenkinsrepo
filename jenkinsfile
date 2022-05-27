@@ -7,7 +7,6 @@ pipeline {
                     image 'php:8.1.0-alpine'
                 }
             }
-            agent { label 'docker_node' }
             steps {
                 sh 'gradle --version'
             }
