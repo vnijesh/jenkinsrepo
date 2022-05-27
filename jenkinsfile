@@ -4,7 +4,6 @@ pipeline {
     }
     stages {
         stage('Test') {
-            ###agent { label 'dockerserver' }
             steps {
                 sh 'nginx -v'
             }
